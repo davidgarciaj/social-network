@@ -9,7 +9,8 @@ import java.util.ArrayList;
 public class PhotoPost
 {
     private String username;
-    private String message;
+    private String filename;
+    private String caption;
     private long timestamp;
     private int likes;
     private ArrayList<String> comments;
@@ -17,10 +18,11 @@ public class PhotoPost
     /**
      * Constructor for objects of class PhotoPost
      */
-    public PhotoPost(String author, String text)
+    public PhotoPost(String author, String filename, String caption)
     {
         username = author;
-        message = text;
+        this.filename = filename;
+        this.caption = caption;
         timestamp = System.currentTimeMillis();
         likes = 0;
         comments = new ArrayList<>();
@@ -52,10 +54,17 @@ public class PhotoPost
     }
 
     /**
+     * Return the name of the file with the image
+     */
+    public String getImageFile(){
+        return filename;
+    }
+
+    /**
      * @return the message
      */
-    public String getText(){
-        return message;
+    public String getCaption(){
+        return caption;
     }
 
     /**
@@ -71,9 +80,11 @@ public class PhotoPost
     public void display(){
         System.out.println("Autor: " + username);
         System.out.println();
-        System.out.println(message);
+        System.out.println(filename);
+        System.out.println();
+        System.out.println(caption);
         System.out.println(); 
-        timeString(timestamp);
+        System.out.println(timeString(timestamp));
         System.out.println("Nº de likes: " + likes + ".");
         System.out.println();
         System.out.println("---------------- Comentarios --------------------");
@@ -88,11 +99,11 @@ public class PhotoPost
         }
         System.out.println("###############################################################");
     }
-    
+
     /**
      * @return devuelve los milisegundos en timeS
      */
-    public String timeString(long time){
+    private String timeString(long time){
         long count = System.currentTimeMillis() - time;
         long totalSec = count / 1000;
         long min = totalSec / 60;

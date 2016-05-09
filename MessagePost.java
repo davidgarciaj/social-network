@@ -8,7 +8,6 @@ import java.util.ArrayList;
  */
 public class MessagePost
 {
-    // instance variables - replace the example below with your own
     private String username;
     private String message;
     private long timestamp;
@@ -74,7 +73,7 @@ public class MessagePost
         System.out.println();
         System.out.println(message);
         System.out.println(); 
-        timeString(timestamp);
+        System.out.println(timeString(timestamp));
         System.out.println("Nº de likes: " + likes + ".");
         System.out.println();
         System.out.println("---------------- Comentarios --------------------");
@@ -93,7 +92,7 @@ public class MessagePost
     /**
      * @return devuelve los milisegundos en timeS
      */
-    public String timeString(long time){
+    private String timeString(long time){
         long count = System.currentTimeMillis() - time;
         long totalSec = count / 1000;
         long min = totalSec / 60;
