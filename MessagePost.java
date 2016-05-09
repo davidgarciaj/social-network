@@ -87,6 +87,9 @@ public class MessagePost
             }
         }
         System.out.println("###############################################################");
+        System.out.println("###############################################################");
+        System.out.println();
+        System.out.println();
     }
     
     /**

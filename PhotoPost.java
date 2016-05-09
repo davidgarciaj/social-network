@@ -98,6 +98,9 @@ public class PhotoPost
             }
         }
         System.out.println("###############################################################");
+        System.out.println("###############################################################");
+        System.out.println();
+        System.out.println();
     }
 
     /**
