@@ -15,7 +15,7 @@ public class JoinGroupPost extends Post
      */
     public JoinGroupPost(String author, String group)
     {
-        super(author,false);
+        super(author);
         this.group = group;
     }
 

@@ -5,7 +5,7 @@ import java.util.ArrayList;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Comments
+public class PostWithComments extends Post
 {
     // instance variables - replace the example below with your own
     private ArrayList<String> comments;
@@ -13,8 +13,9 @@ public class Comments
     /**
      * Constructor for objects of class Comments
      */
-    public Comments()
+    public PostWithComments(String author)
     {
+        super(author);
         comments = new ArrayList<>();
     }
 

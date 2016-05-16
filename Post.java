@@ -15,7 +15,7 @@ public class Post
     /**
      * Constructor for objects of class MessagePost
      */
-    public Post(String user, boolean canComments)
+    public Post(String user)
     {
         username = user;
         timestamp = System.currentTimeMillis();
