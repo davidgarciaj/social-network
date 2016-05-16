@@ -10,6 +10,7 @@ public class NewsFeed
 {
     private ArrayList<MessagePost> messages;
     private ArrayList<PhotoPost> photos;
+    private ArrayList<JoinGroupPost> joinGroups;
 
     /**
      * Constructor for objects of class NewsFeed
@@ -39,6 +40,16 @@ public class NewsFeed
     {
         photos.add(photo);
     }
+
+    /**
+     * Add a post with a image
+     * 
+     * @message the image to introduce
+     */
+    public void addJoinGroupPost(JoinGroupPost join)
+    {
+        joinGroups.add(join);
+    }
     
     /**
      * Show the post
@@ -49,6 +60,9 @@ public class NewsFeed
         }
         for(PhotoPost photo : photos){
             photo.display();
+        }
+        for(JoinGroupPost joinGroup : joinGroups){
+            joinGroup.display();
         }
     }
 }
