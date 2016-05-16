@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 
 /**
  * Write a description of class Post here.
@@ -11,8 +10,7 @@ public class Post
 {
     private String username;
     private long timestamp;
-    private int likes;
-    private ArrayList<String> comments;    
+    private int likes;   
 
     /**
      * Constructor for objects of class MessagePost
@@ -22,9 +20,8 @@ public class Post
         username = user;
         timestamp = System.currentTimeMillis();
         likes = 0;
-        if(canComments) comments = new ArrayList<>();
     }
-    
+
     /**
      * @return username
      */
@@ -51,13 +48,6 @@ public class Post
     }
 
     /**
-     * Add a comment of the user
-     */
-    public void addComment(String text){
-        if(comments != null) comments.add(text);
-    }
-
-    /**
      * @return the number to indicate the moment
      */
     public long getTimeStamp(){
@@ -74,23 +64,13 @@ public class Post
         System.out.println(timeString(timestamp));
         System.out.println("Nº de likes: " + likes + ".");
         System.out.println();
-        System.out.println("---------------- Comentarios --------------------");
-        if(comments != null)
-        if(comments.isEmpty()){
-            System.out.println("Este post no tiene ningún comentario de momento.");
-        }
-        else{
-            for(String comment : comments){
-                System.out.println(comment);
-                System.out.println();
-            }
-        }
+           
         System.out.println("###############################################################");
         System.out.println("###############################################################");
         System.out.println();
         System.out.println();
     }
-    
+
     /**
      * @return devuelve los milisegundos en timeS
      */

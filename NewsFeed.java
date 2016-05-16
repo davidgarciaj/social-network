@@ -19,6 +19,7 @@ public class NewsFeed
     {
         messages = new ArrayList<>();
         photos = new ArrayList<>();
+        joinGroups = new ArrayList<>();
     }
 
     /**
