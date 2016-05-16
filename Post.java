@@ -75,6 +75,7 @@ public class Post
         System.out.println("Nº de likes: " + likes + ".");
         System.out.println();
         System.out.println("---------------- Comentarios --------------------");
+        if(comments != null)
         if(comments.isEmpty()){
             System.out.println("Este post no tiene ningún comentario de momento.");
         }
