@@ -16,7 +16,7 @@ public class PhotoPost extends Post
      */
     public PhotoPost(String author, String filename, String caption)
     {
-        super(author);
+        super(author,true);
         this.filename = filename;
         this.caption = caption;
     }

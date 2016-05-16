@@ -15,7 +15,7 @@ public class MessagePost extends Post
      */
     public MessagePost(String author, String text)
     {
-        super(author);
+        super(author,true);
         message = text;
     }
     

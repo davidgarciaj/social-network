@@ -17,12 +17,12 @@ public class Post
     /**
      * Constructor for objects of class MessagePost
      */
-    public Post(String author)
+    public Post(String user, boolean canComments)
     {
-        username = author;
+        username = user;
         timestamp = System.currentTimeMillis();
         likes = 0;
-        comments = new ArrayList<>();
+        if(canComments) comments = new ArrayList<>();
     }
     
     /**
@@ -54,7 +54,7 @@ public class Post
      * Add a comment of the user
      */
     public void addComment(String text){
-        comments.add(text);
+        if(comments != null) comments.add(text);
     }
 
     /**
