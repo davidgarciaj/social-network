@@ -25,4 +25,13 @@ public class JoinGroupPost extends Post
     public void messageToJoin(){
         System.out.println("The user " + getUsername() + " has join to group " + group + ".");
     }
+
+    /**
+     * Print the post
+     */
+    public String toString(){
+        return "---------------- Join Group --------------------\n" +
+            super.toString() + "\nThis usser join to group " + group 
+            + ".\n###############################################################\n";
+    }
 }

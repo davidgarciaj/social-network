@@ -34,4 +34,13 @@ public class PhotoPost extends PostWithComments
     public String getCaption(){
         return caption;
     }
+
+    /**
+     * Print the post
+     */
+    public String toString(){
+        return "---------------- Photo Post --------------------\nNombre del archivo: " + filename 
+            + "\nDescripcion: " + caption + "\nFrom:\n" +
+            super.toString();
+    }
 }

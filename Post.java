@@ -57,18 +57,10 @@ public class Post
     /**
      * Print the post
      */
-    public void display(){
-        System.out.println("Autor: " + username);
-        System.out.println();
-        System.out.println(); 
-        System.out.println(timeString(timestamp));
-        System.out.println("Nº de likes: " + likes + ".");
-        System.out.println();
-           
-        System.out.println("###############################################################");
-        System.out.println("###############################################################");
-        System.out.println();
-        System.out.println();
+    public String toString(){
+        return "\n---------------- Datos del Post --------------------\nAutor: " 
+                + username + "\n" + "\n\n" + timeString(timestamp) + "\nNº de likes: "
+                + likes + ".\n";
     }
 
     /**

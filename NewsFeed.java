@@ -33,7 +33,7 @@ public class NewsFeed
      */
     public void show(){
         for(Post post : posts){
-            post.display();
+            System.out.println(post);
         }
     }
 }

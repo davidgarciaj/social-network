@@ -25,20 +25,22 @@ public class PostWithComments extends Post
     public void addComment(String text){
         comments.add(text);
     }
-    
+
     /**
-     * 
+     * Print the post
      */
-    public void printComments(){
-        System.out.println("---------------- Comentarios --------------------");
+    public String toString(){
+        String cadena = super.toString() + "\n---------------- Comentarios --------------------\n"
+            + "###############################################################";
         if(comments.isEmpty()){
-            System.out.println("Este post no tiene ningún comentario de momento.");
+            cadena += "\nEste post no tiene ningún comentario de momento.";
         }
         else{
             for(String comment : comments){
-                System.out.println(comment);
-                System.out.println();
+                cadena += "\n" + comment + "\n";
             }
         }
+        cadena += "\n###############################################################\n";
+        return cadena;
     }
 }

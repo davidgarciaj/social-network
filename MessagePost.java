@@ -32,4 +32,12 @@ public class MessagePost extends PostWithComments
     public void printShortSummary(){
         System.out.println("Esto es un post de texto creado por " + getUsername());
     }
+
+    /**
+     * Print the post
+     */
+    public String toString(){
+        return "---------------- Message Post --------------------\n" + message + "\nFrom:\n" +
+            super.toString();
+    }
 }
